@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "azure-blob-sync"
+version = "0.1.0"
+description = "Sync blob to ai search"
+authors = ["PJ"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.0"
+azure-search-documents = "^11.6.0b4"
+azure-storage-blob = "^12.20.0"
+azure-identity = "^1.14.1"
+python-dateutil = "^2.8.2"
+langchain-openai = "^0.1.14"
+langchain-core = "^0.2.11"
+langchain-community = "^0.2.6"
+langchain = "^0.2.6"
+openai = "^1.35.10"
+beautifulsoup4 = "^4.12.2"
+tiktoken = "^0.7.0"
+pytest = "^7.4.3"
+azure-core-tracing-opentelemetry = "^1.0.0b11"
+opentelemetry-instrumentation-requests = "^0.46b0"
+azure-monitor-opentelemetry = "^1.6.0"
+azure-ai-documentintelligence = "^1.0.0b3"
+markdownify="^0.12.1"
+
+
+[tool.poetry.scripts]
+sync = "blob_sync.sync:sync"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
