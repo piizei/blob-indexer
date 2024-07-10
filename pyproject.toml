@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "Sync blob to ai search"
 authors = ["PJ"]
 readme = "README.md"
+packages = [
+    { include = "blob_sync" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -25,7 +28,6 @@ opentelemetry-instrumentation-requests = "^0.46b0"
 azure-monitor-opentelemetry = "^1.6.0"
 azure-ai-documentintelligence = "^1.0.0b3"
 markdownify="^0.12.1"
-
 
 [tool.poetry.scripts]
 sync = "blob_sync.sync:sync"
